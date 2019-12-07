@@ -1,0 +1,44 @@
+{{ define "main" }} {{partial "navbar" . }}
+<div class="pt-3 text-center container">
+  <p>
+    <input
+      class="p-2"
+      placeholder="Username"
+      type="text"
+      name="name"
+      id="username"
+    />
+  </p>
+  <p>
+    <input
+      class="p-2"
+      placeholder="Password"
+      type="password"
+      name="password"
+      id="password"
+    />
+    <script src="/js/auth.js"></script>
+  </p>
+</div>
+<div class="text-center">
+  <a onClick="getInfo()" class="btn btn-lg btn-primary text-white">
+    Submit
+  </a>
+</div>
+
+<div class="text-center">
+    <h2 style="visibility:hidden" id="conditional">Password Incorrect</h2>
+</div>
+<!-- 
+<div class="container center">
+  <div class="row py-3">
+    <a
+      href="/responder/page0"
+      class="btn btn-lg btn-primary text-white"
+    >
+      Submit
+    </a>
+  </div>
+</div> -->
+
+{{ end }}
